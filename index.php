@@ -66,8 +66,13 @@ $articles=[
 
 $id = $_GET['id'];
 
-$halaman = new Halaman();
+if($id == '' || $id >= count($articles)) {
+  $halaman = new Home();
+} else {
+  $halaman = new Article();
+}
 $halaman->set_menu($menu);
 $halaman->set_id_article($id);
 $halaman->set_articles($articles);
 $halaman->show_body();
+

@@ -1,4 +1,8 @@
 <?php
+
+$con = mysqli_connect('localhost','root','','db_wiki');
+
+
 $id = $_GET['id'];
 
 if($id == '') {

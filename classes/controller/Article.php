@@ -6,7 +6,7 @@ require_once $path."/classes/model/Articles.php";
 $articles = new Articles();
 
 // Menampilkan Data
-$berita = $articles->get_articles();
+$berita = $articles->get_articles($con);
 $menu = $articles->get_menu();
 // Load View
 require_once $path."/classes/view/Article_view.php";
